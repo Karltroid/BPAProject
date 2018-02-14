@@ -1,0 +1,6 @@
+Topic:
+ BPA would like to create a one stop interactive website explaining all the different BPA Cares Awards that local chapters can apply for, and what
+ they need to do to earn them. Each BPA Cares Award should be listed on its own webpage.
+
+info Location: 
+ http://www.bpa.org/service/bpacares

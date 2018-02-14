@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+			Tested/Supported Browsers: Chrome, Firefox, Edge, & Internet Explorer
+			Supported Aspect-Ratio/Resolutions: Any (fully responsive design)
+			Last Update: 2/14/17
+			Known Issue(s): -Custom scroll bar only works on chrome
+			                -alternate header animation flows upwards on fade-in in internet explorer
+		-->
+
+		<!-- meta info-->
+		<meta charset="UTF-8" />
+		<meta name="description" content="A one stop interactive website explaining all the different BPA Cares Awards the local chapters can apply for" />
+		<meta name="keywords" content="BPA,business,professionals,America,awards,cares" />
+		<meta name="author" content="Karl Palmer & Danny Paiva" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- stylesheets & scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<script src="scripts/scripts.js"></script>
+
+		<!-- site title & icon -->
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico" />
+		<title>
+			BPA Cares Awards
+		</title>
+	</head>
+	<body>
+		<!-- page header (logo) -->
+		<div id="header" class="box-shadow">
+			<img id="logo" class="center-xy" src="images/header/logo.png" alt="Business Professionals of America (logo)" />
+		</div>
+
+		<!-- alternate fixed header for whe the user scrolls down -->
+		<div id="header-fixed" class="box-shadow">
+		</div>
+
+		<!-- page content (info) -->
+		<div id="content">
+			
+			<!-- safe space for content to go -->
+			<div id="content-space" class="center-x">
+				
+				<!-- content section header -->
+				<h1 id="content-header" class="font-arial-black">
+					BPA Cares Program
+				</h1>
+
+				<!-- award: service leaning -->
+				<a style="text-decoration: none; /* getting rid of firefox link underline */" href="subdirectories/service_learning_awards/service_learning_awards.html" title="Details On Our Service Learning Awards">
+					<div class="award box-shadow">
+						<!-- award top half -->
+						<div class="award-top font-arial font-weight-bold box-shadow">
+							<!-- award image -->
+							<div class="award-top-left">
+								<img class="award-image center-y box-shadow" src="images/awards/service_learning.jpg" alt="Picture of people helping out" />
+							</div>
+							<!-- award title/heading -->
+							<div class="award-top-right center-text-y">
+								<h2 class="award-header">
+									Service Learning Awards
+								</h2>
+							</div>
+						</div>
+						<!-- award bottom half (info portion) -->
+						<div class="award-bottom font-arial center-text-y">
+							The purpose of the Service Learning Awards Program is to encourage individuals and chapters to be involved in their community through service learning
+						</div>
+					</div>
+				</a>
+
+				<!-- award: special recognition -->
+				<a style="text-decoration: none; /* getting rid of firefox link underline */" href="subdirectories/special_recognition_awards/special_recognition_awards.html" title="Details On Our Special Recognition Awards">
+					<div class="award box-shadow">
+						<!-- award top half -->
+						<div class="award-top font-arial font-weight-bold box-shadow">
+							<!-- award image -->
+							<div class="award-top-left">
+								<img class="award-image center-y box-shadow" src="images/awards/special_recognition.jpg" alt="Picture of a guy showing another person something on his phone" />
+							</div>
+							<!-- award title/heading -->
+							<div class="award-top-right center-text-y">
+								<h2 class="award-header">
+									Special Recognition Awards
+								</h2>
+							</div>
+						</div>
+						<!-- award bottom half (info portion) -->
+						<div class="award-bottom font-arial center-text-y">
+							The purpose of the Special Recognition Awards Program is to encourage individuals and chapters to support and promote their organizations
+						</div>
+					</div>
+				</a>
+
+				<!-- award: professional -->
+				<a style="text-decoration: none; /* getting rid of firefox link underline */" href="subdirectories/professional_awards/professional_awards.html" title="Details On Our Professional Awards">
+					<div class="award box-shadow" style="margin-bottom: 0;">
+						<!-- award top half -->
+						<div class="award-top font-arial font-weight-bold box-shadow">
+							<!-- award image -->
+							<div class="award-top-left">
+								<img class="award-image center-y box-shadow" src="images/awards/professional.jpg" alt="Picture of a guy being professional" />
+							</div>
+							<!-- award title/heading -->
+							<div class="award-top-right center-text-y">
+								<h2 class="award-header">
+									Professional Awards
+								</h2>
+							</div>
+						</div>
+						<!-- award bottom half (info portion) -->
+						<div class="award-bottom font-arial center-text-y">
+							The purpose of the Professional Awards Program is to acknowledge the dedication and service of our supporters.
+						</div>
+					</div>
+				</a>
+
+				<!-- footer link to official bpa site for other info not relating to cares awards -->
+				<a id="BPASITE" style="margin-top: 2.5vh;" href="http://www.bpa.org/">
+					<footer class="box-shadow font-arial-black">
+						Want more info? Check out the official BPA site! 
+						<span id="bpa-link" class="font-arial">
+							bpa.org
+						</span>
+					</footer>
+				</a>
+			<div>
+		</div>
+	</body>
+</html>

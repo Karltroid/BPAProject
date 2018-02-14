@@ -1,0 +1,748 @@
+/* webpage/body */
+body
+{
+	/* removing browser default padding around the webpage/body */
+	padding: 0;
+
+	/* removing browser default margin around the webpage/body */
+	margin: 0;
+
+	/* removing the horizontal scrollbar in case of any overflowing content */
+	overflow-x: hidden;
+
+	/* removing the horizontal scrollbar in case of any overflowing content on internet explorer & edge browsers */
+	-ms-overflow-style: hidden;
+
+	/* backup tan background color if the #content background color is messed up */
+	background-color: rgb(226,193,151);
+}
+
+/* arial black font (incase a browser doesn't have arial black by default) */
+@font-face
+{
+	/* name to call the font */
+	font-family: arial-black;
+
+	/* source file for the arial font */
+	src: url(../fonts/arial_black/arial_black.ttf);
+}
+
+/* arial font (incase a browser doesn't have arial by default) */
+@font-face
+{
+	/* name to call the font */
+	font-family: arial;
+	
+	/* source file for the arial font */
+	src: url(../fonts/arial/arial.ttf);
+}
+
+/* scrollbar width */
+::-webkit-scrollbar 
+{
+    /* make the scrollbar 10px wide */
+    width: 10px;
+}
+
+/* scrollbar track */
+::-webkit-scrollbar-track 
+{
+    /* make the scrollbar track/background a very light gray */
+    background: rgb(220,220,220); 
+}
+
+/* scrollbar handle */
+::-webkit-scrollbar-thumb 
+{
+    /* make the scrollbar handle the bpa red color when its not being used/touched */
+    background: rgb(239,62,66); 
+}
+
+/* scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover 
+{
+    /* make the handle opaque on hover */
+    background: rgba(239,62,66,.75); 
+}
+
+/* scrollbar handle when in use */
+::-webkit-scrollbar-thumb:active
+{
+	/* make the handle the bpa blue color when in use */
+	background: rgb(0,50,99); 
+}
+
+/* links */
+a
+{
+	/* changing the default link color to bpa gray */
+	color: rgb(105,105,105);
+}
+
+/* links when the user is hovering over */
+a:hover
+{
+	/* removing browser default text-decoration */
+	text-decoration: none;
+
+	/* bolding the text */
+	font-weight: bolder;
+}
+
+/* paragraphs */
+p
+{
+	/* removing default paragraph padding */
+	padding: 0;
+
+	/* adding top and bottom padding to space out paragraphs vertically */
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	/* removing default paragraph margin */
+	margin: 0;
+}
+
+/* headings in use */
+h1,h2
+{
+	/* removing browser default margins in headings */
+	margin: 0;
+
+	/* removing browser default padding in headings */
+	padding: 0;
+}
+
+/*unordered lists*/
+ul
+{
+	/* removing default padding */
+	padding: 0;
+
+	/* removing default margin*/
+	margin: 0;
+
+	/* removing bullet points */
+	list-style-type: none;
+}
+
+/* bottom footer advertising the official bpa page for more info */
+footer
+{
+	/* making it so the footer/block goes around the text/content, instead of filling the entire parent div */
+	display: inline-block;
+
+	/* spacing the footer away from the main content/award info */
+	margin-top: 3.4vh;
+
+	/* space around the text */
+	padding: 1vh 3vw 1vh 3vw;
+
+	/* bpa red text color */
+	color: rgb(239,62,66);
+
+	/* bpa blue background color */
+	background-color: rgb(0,50,99);
+}
+
+/* when the user is hovering over the footer */
+footer:hover
+{
+	/* shorten the padding on the left/right */
+	padding: 1vh 2.77vw 1vh 2.77vw;
+
+	/* darken and shrink the box shadow */
+	box-shadow: 0 1px 4px rgba(0,0,0,0.23), 0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* bpa site footer */
+#BPASITE
+{
+	/* making it separate from the above section and not flow/float with it */
+	display: block;
+	clear: both;
+}
+
+/* the "bpa.org" text/link in the footer */
+#bpa-link
+{
+	/* all animations will take half a second to complete */
+	transition: .5s;
+
+	/* make the text white */
+	color: rgb(255,255,255);
+
+	/* spacing the bpa link away from the other text */
+	padding-left: 2.4vw;
+}
+
+/* when the user is hovering over the footer, modify the child element, #bpa-link */
+footer:hover #bpa-link
+{
+	/* all animations will take half a second to complete */
+	transition: .5s;
+
+	/* spacing the bpa link further away from the other text */
+	padding-left: 2.3vw;
+
+	/* spacing apart the bpa link's letters */
+	letter-spacing: .1vw;
+
+	/* making the letters bolder */
+	font-weight: bold;
+}
+
+/* when the user hovering over the footer */
+footer:hover
+{
+	/* play animations over a duration of half a second */
+	transition: .5s;
+}
+
+/* class to assign the arial-black font to an element */
+.font-arial-black
+{
+	/* assigning the arial-black font */
+	font-family: arial-black;
+}
+
+/* class to assign the arial font to an element */
+.font-arial
+{
+	/* assigning the arial font */
+	font-family: arial;
+}
+
+/* class to make the text in an element have a bold/thick text weight */
+.font-weight-bold
+{
+	/* making the text thicker/bold */
+	font-weight: bold;
+}
+
+/* page header div */
+#header
+{
+	/* making the header/div fill the entire view width of the browser window */
+	width: 100vw;
+
+	/* making the header/div fill 65% view height of the browser window */
+	height: 65vh;
+
+	/* making the background color of the header white */
+	background-color: rgb(255,255,255);
+
+	/* making sure the header is always on top, overlaying all other elements */
+	z-index: 1000;
+}
+
+/* alternate fixed header for when the user starts scrollng down the page */
+#header-fixed
+{
+	/* start off the screen, will come down with scripts */
+	margin-top: -25vh;
+
+	/* start off invisible, will appear with scripts */
+	opacity: 0;
+
+	/* keeping the header locked on the webpage */
+	position: fixed;
+
+	/* locking the header to the top of the webpage */
+	top: 0;
+
+	/* height of the header */
+	height: 25vh;
+
+	/* width of the header */
+	width: 100vw;
+
+	/* src file for the background/fill image of the header */
+	background-image: url('../images/header/header_1.png');
+
+	/* make the background image fill the entire div/header */
+	background-size: cover;
+
+	/* align the top of the header as the top of the image */
+	background-position: top;
+}
+
+/* div where the info/content will be displayed (entire bottom side of the page) */
+#content
+{
+	/* making the content div fill the entire view width of the browser window */
+	width: 100vw;
+
+	/* making the content background color the tan bpa color from the logo */
+	background-color: rgb(227,190,152);
+
+	/* making sure the div is always below the header */
+	z-index: -1;
+
+	/* allowing the .box-shadow class to work/appear on the header */
+	position: absolute;
+}
+
+/* logo image element in the #header */
+#logo
+{
+	/* making the logo's height fill 85% of its parent element (#header), width is automatic, keeping its aspect ratio */
+	height: 85%;
+}
+
+/* backbutton that takes the user to the previous page */
+#backbutton
+{
+	/* play animations during the course of half a second */
+	transition: .5s;
+
+	/* make the font color of the back button white */
+	color: rgb(255,255,255);
+
+	/* get rid of default underline from the link */
+	text-decoration: none;
+
+	/* make the background color an opaque black */
+	background-color: rgba(0,0,0,.6);
+
+	/* add padding around the div to help the border radius make the div a circle*/
+	padding: 45px 26px 45px 26px;
+
+	/* curve the edegs of the div, making it a circle */
+	border-radius: 50%;
+}
+
+/* when the user is hovering over the back button */
+#backbutton:hover
+{
+	/* play animations during the course of half a second */
+	transition: .5s;
+
+	/* darken the div background color */
+	background-color: rgba(0,0,0,.85);
+}
+
+/* class to center a element horizontall and vertically in another element */
+.center-xy
+{
+	/* make element moveable */
+	position: relative;
+	
+	/* move element down 50% of its parents height */
+	top: 50%;
+	
+	/* move element left 50% of its parents width */
+	left: 50%;
+	
+	/* move element back half way, centering the element */
+	transform: translate(-50%, -50%); 
+}
+
+/* class to center a element vertically in another element */
+.center-y
+{
+	/* make element moveable */
+	position: relative;
+	
+	/* move element top 50% of its parents height */
+	top: 50%;
+	
+	/* move element back half way, centering it vertically */
+  	transform: translateY(-50%);
+}
+
+/* class to center a element horizontally in another element */
+.center-x
+{
+	/* make sure element is acting like a block element (like a div) */
+	display: block;
+	
+	/* let margin center the element by putting left/right margins as auto */
+	margin: 0 auto;
+}
+
+/* class to center text vertically */
+.center-text-y
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 20%;
+}
+
+
+/* class to add a shadow that goes around certian divs */
+.box-shadow
+{
+	/* animations that occur will take half a second to play */
+	transition: .5s;
+
+	/* shadow specifications */
+	box-shadow: 0 3px 6px rgba(0,30,79,0.16), 0 3px 6px rgba(0,30,79,0.23);
+}
+
+/* safe space for content to go without worrying about overflow */
+#content-space
+{
+	/* space the content space 5% of the view height away from the header */
+	padding-top: 5vh;
+	
+	/* space the content space 5% of the view height away from bottom of the webpage */
+	padding-bottom: 5vh;
+	
+	/* make the safe space be 95% of the view width */
+	width: 95vw;
+	
+	/* align text to center by default */
+	text-align: center;
+}
+
+/* content section title/header (big blue text underneath the header) */
+#content-header
+{
+	/* make the font color bpa blue */
+	color: rgb(0,50,99);
+	
+	/* make the font size scale with the width of the screen */
+	font-size: 6vw;
+	
+	/* push the info away from the header */
+	margin-bottom: 5vh;
+	
+	/* fixing slightly uncentered text on long titles  */
+	margin-left: -1.5vw;
+	
+	/* shadow behind the text */
+	text-shadow: .25vw .25vw rgba(0,0,0,.2);
+	
+	/* allow the title to go beyond the safe space and not wrap */
+	white-space: nowrap;
+}
+
+/* home page award section */
+.award
+{
+	/* height of the award section */
+	height: 300px;
+	
+	/* space stacked award sections away from eachother */
+	margin-bottom: 5vh;
+	
+	/* set the background color of the award section to white */
+	background-color: rgb(255,255,255);
+	
+	/* any animations that occur will take half a second to finish */
+	transition: .5s;
+}
+
+/* top half of the award section */
+.award-top
+{
+	/* make the top half fill most of the space, 80% height of the .award parent div */
+	height: 80%;
+	
+	/* set the font color to bpa red on the top half */
+	color: rgb(239,62,66);
+	
+	/* put a bpa red border on the bottom of the top half */
+	border-bottom: 2px solid rgb(239,62,66);
+}
+
+/* left side of the top half of the award section */
+.award-top-left
+{
+	/* set the width of the left side to be 20% of the top half's width */
+	width: 20%;
+	
+	/* set the height of the left side to be 100% of the top half's height (80% of the entire award section) */
+	height: 100%;
+	
+	/* make sure the left side is on the left */
+	float: left;
+	
+	/* anchor content to the left, instead of the center */
+	justify-content: left;
+
+}
+
+/* right side of the top half of the award section */
+.award-top-right
+{
+	/* set the width of the right side to be 80% if the top half's width */
+	width: 80%;
+	
+	/* set the height of the right side to be 100% of the top half's height (80% of the entire award section) */
+	height: 100%;
+	
+	/* make sure the right side is on the right */
+	float: right;
+}
+
+/* bottom half of the award section */
+.award-bottom
+{
+	/* set the height of the bottom half to be 20% of the entire award section's height */
+	height: 20%;
+	
+	/* set the bottom half's font color to be bpa gray */
+	color: rgb(105,105,105);
+	
+	/* set the font size of the bottom half text to by 17px, a little bit larger than default */
+	font-size: 17px;
+}
+
+
+/* award image located in .award-top-left */
+.award-image
+{
+	/* push image away from the edge of the award div */
+	margin-left: .4vw;
+	
+	/* set the width of the image to be 95% of .award-top-left's width */
+	width: 95%;
+	
+	/* keep the image in the center when the webpage gets thin and the content starts wrapping */
+	float: left;
+}
+
+/* award header text located in .award-top-right */
+.award-header
+{
+	/* any animations that occur will take half a second to complete */
+	transition: .5s;
+	
+	/* set the size of the text to be very large, and based on the size of the award div's width */
+	font-size: 500%;
+	
+	/* shadow behind the text */
+	text-shadow: .18vw .18vw rgba(0,0,0,.3);
+}
+
+/* whent the user is hovering over one of the award sections */
+.award.box-shadow:hover
+{
+	/* any animations that occur will take half a second to complete */
+	transition: .5s;
+	
+	/* lessen the size of the box shadow, but make it darker */
+	box-shadow: 0 16px 31px rgba(0,30,79,0.29), 0 12px 14px rgba(0,50,99,0.21);
+}
+
+/* when the user is hovering over one of the award sections, modify its child element, .award-header */
+.award.box-shadow:hover .award-header
+{
+	/* any animations that occur will take half a second to complete */
+	transition: .5s;
+	
+	/* lessen the size of the text shadow, but make it darker */
+	text-shadow: .075vw .075vw rgba(0,0,0,.5);
+}
+
+
+/* when the user is hovering over one of the award sections, modify its child element, .box-shadow */
+.award.box-shadow:hover .box-shadow
+{
+	/* any animations that occur will take half a second to complete */
+	transition: .5s;
+	
+	/* increase the size of the box shadow */
+	box-shadow: 0 1px 4px rgba(0,30,79,0.23), 0 1px 4px rgba(0,50,99,0.3);
+}
+
+#header-subpage
+{
+	height: 25vh;
+	width: 100vw;
+	background-image: url('../images/header/header_1.png');
+	background-size: cover;
+	background-position: top;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.info-section-long
+{
+	height: auto;
+	width: 100%;
+	background-color: rgb(255,255,255);
+	transition: .5s;
+	display: inline-block;
+	margin: .2vw;
+	margin-bottom: 1vh;
+	vertical-align: top;
+}
+
+.info-section-header
+{
+	color: rgb(239,62,66);
+	font-size: 36px;
+	text-align: left;
+	padding: .4vw;
+	padding-left: .8vw;
+	text-transform: uppercase;
+	border-bottom: 2px solid rgb(239,62,66);
+	text-shadow: .15vw .15vw rgba(0,0,0,.2);
+}
+
+.info-section-content
+{
+	text-align: left;
+	color: rgb(105,105,105);
+	text-indent: 1vw;
+	padding: .5vw;
+	padding-top: 1.5vw;
+	padding-bottom: 1vw;
+}
+
+.left-side
+{
+	float: left;
+	width: 49.5%;
+	display: inline-block;
+}
+
+.right-side
+{
+	float: right;
+	width: 49.5%;
+	display: inline-block;
+}
+
+
+.fixed-header
+{
+  position: fixed;
+  top: 0; left:0;
+  width: 100%; 
+}
+
+/* when the users screen is on big */
+@media only screen and (max-width: 1520px) 
+{
+	.award-header
+	{
+		font-size: 450%;
+	}
+}
+
+/* when the user is on a "mobile-like" resolution/aspect ratio */
+@media only screen and (max-width: 900px) 
+{
+    .award-header
+	{
+		font-size: 350%;
+	}
+    #header
+	{
+		height: auto;
+		padding: 10px;
+	}
+	#header-fixed
+	{
+		display: none;
+	}
+	.center-xy
+	{
+		transform: translate(-51.5%, 0%);
+	}
+	.award-top-left
+	{
+		width: 100%;
+		height: 50%;
+	}
+	.award-top-right
+	{
+		width: 100%;
+		height: 50%;
+	}
+	.award-image
+	{
+		height: 90%;
+		width: auto;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#logo
+	{
+		width: 90%;
+		height: auto;
+	}
+
+	.info-section-long
+	{
+		height: auto;
+		width: 100%;
+		background-color: rgb(255,255,255);
+		margin: .2vw;
+		margin-bottom: 2.5vh;
+	}
+
+	/* hiding the scrollbar on "mobile-like" resolutions/aspect ratios */
+	::-webkit-scrollbar 
+	{
+	    width: 0;
+	}
+
+	.left-side
+	{
+		float: none;
+		width: 100%;
+		display: inline-block;
+	}
+
+	.right-side
+	{
+		float: none;
+		width: 100%;
+		display: inline-block;
+	}
+}
+
+/* if the users screen is super skinny/small */
+@media only screen and (max-width: 700px) 
+{
+	.award-image
+	{
+		width: 35%;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.award-top-left
+	{
+		display: none;
+	}
+	.award-top-right
+	{
+		width: 100%;
+		height: 100%;
+		float: none;
+	}
+
+	.award-top
+	{
+		height: 65%;
+	}
+	.award-bottom
+	{
+		padding: 1px;
+		height: 35%;
+	}
+	#content-space
+	{
+		width: 88vw;
+	}
+}
+
+/* when the users screen is very big */
+@media only screen and (min-width: 2460px) 
+{
+    .award-image
+    {
+    	height: 95%;
+    	width: auto;
+    }
+}
