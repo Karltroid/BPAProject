@@ -4,7 +4,7 @@ $( document ).ready(function() // run the script as soon as the page loads
 
 	$(window).scroll(function() // run the script when the user is scrolling
 	{
-	    if ($(window).scrollTop() >= headerHeight/1.61 && $(window).width() > 900) // if the user has scrolled passed 61% of the headers height 
+	    if ($(window).scrollTop() >= headerHeight/1.62 && $(window).width() > 900) // if the user has scrolled passed 62% of the headers height 
 	    {                                                                          // AND their browser window is in a "desktop-like" resolution/aspect-ratio then...
 
 			$('#header-fixed').css('opacity','1'),100; // show/fade-in the alternate fixed header
