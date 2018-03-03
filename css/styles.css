@@ -92,12 +92,8 @@ a:hover
 /* paragraphs */
 p
 {
-	/* removing default paragraph padding */
-	padding: 0;
-
-	/* adding top and bottom padding to space out paragraphs vertically */
-	padding-top: 5px;
-	padding-bottom: 5px;
+	/* paragraph padding */
+	padding: 5px 0px 5px 0px;
 
 	/* removing default paragraph margin */
 	margin: 0;
@@ -153,6 +149,13 @@ footer:hover
 
 	/* darken and shrink the box shadow */
 	box-shadow: 0 1px 4px rgba(0,0,0,0.23), 0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* aside comments/elements */
+aside
+{
+	/* making the font color bpa gray */
+	color: rgb(105,105,105);
 }
 
 /* bpa site footer */
@@ -371,7 +374,7 @@ footer:hover
 }
 
 
-/* class to add a shadow that goes around certian divs */
+/* class to add a shadow that goes around certain divs */
 .box-shadow
 {
 	/* animations that occur will take half a second to play */
@@ -518,7 +521,7 @@ footer:hover
 	text-shadow: .18vw .18vw rgba(0,0,0,.3);
 }
 
-/* whent the user is hovering over one of the award sections */
+/* when the user is hovering over one of the award sections */
 .award.box-shadow:hover
 {
 	/* any animations that occur will take half a second to complete */
@@ -549,79 +552,140 @@ footer:hover
 	box-shadow: 0 1px 4px rgba(0,30,79,0.23), 0 1px 4px rgba(0,50,99,0.3);
 }
 
+/* header for sub-directories (every page besides index.html) */
 #header-subpage
 {
+	/* setting the height of the header to 25% of the view window's height */
 	height: 25vh;
+	
+	/* setting the width of the header to 100% of the view window's width */
 	width: 100vw;
+	
+	/* setting the background/header image */
 	background-image: url('../images/header/header_1.png');
+	
+	/* making the background image will the entire width of the div */
 	background-size: cover;
+	
+	/* align the background position from the top instead of the default center */
 	background-position: top;
+	
+	/* flex children elements (back button) */
 	display: flex;
+	
+	/* centering children elements (back button) */
   	justify-content: center;
+	
+	/* aligning children elements to the center (back button) */
   	align-items: center;
 }
 
+/* info section */
 .info-section-long
 {
+	/* height of section depends on how much is in it */
 	height: auto;
+	
+	/* width is 100% of parent div's width */
 	width: 100%;
+	
+	/* setting the background color of the info section to white */
 	background-color: rgb(255,255,255);
+	
+	/* any animations that occur will take half a second to play out */
 	transition: .5s;
+	
+	/* multiple info sections will flow in-line next to each other, go to the next line and etc. */
 	display: inline-block;
+	
+	/* push other info sections away by .2% of the view window's width */
 	margin: .2vw;
+	
+	/* push info sections that are below even further away, 1% of the of pages view window height */
 	margin-bottom: 1vh;
-	vertical-align: top;
 }
 
+/* the header portion of an info section */
 .info-section-header
 {
+	/* bpa red font color */
 	color: rgb(239,62,66);
+	
+	/* 36px sized font */
 	font-size: 36px;
+	
+	/* un-center text, instead align to the left */
 	text-align: left;
-	padding: .4vw;
-	padding-left: .8vw;
+	
+	/* add some spacing around the text */
+	padding: .4vw .4vw .4vw .8vw;
+	
+	/* force uppercase letters */
 	text-transform: uppercase;
+	
+	/* put a red border on the bottom of the header portion */
 	border-bottom: 2px solid rgb(239,62,66);
+	
+	/* add a shadow to the text */
 	text-shadow: .15vw .15vw rgba(0,0,0,.2);
 }
 
+/* the main info portion of the info-section */
 .info-section-content
 {
+	/* un-center text, instead align to the left */
 	text-align: left;
+	
+	/* bpa gray font color */
 	color: rgb(105,105,105);
+	
+	/* put an indent on the beginning of every paragraph */
 	text-indent: 1vw;
-	padding: .5vw;
-	padding-top: 1.5vw;
-	padding-bottom: 1vw;
+	
+	/* put some spacing  */
+	padding: 1.5vw .5vw 1vw .5vw;
 }
 
+/* info-sections that are on the left side of the page when in desktop mode */
 .left-side
 {
+	/* stay on the left side */
 	float: left;
+	
+	/* set the width to around half of the parent div */
 	width: 49.5%;
+	
+	/* allow both sides to display next to each other */
 	display: inline-block;
 }
 
+/* info-sections that are on the right side of the page when in desktop mode */
 .right-side
 {
+	/* stay on the right side */
 	float: right;
+	
+	/* set the width to around half of the parent div */
 	width: 49.5%;
+	
+	/* allow both sides to display next to each other */
 	display: inline-block;
 }
 
-
-.fixed-header
+/* pushing elements down that are below if things are feeling too squished */
+.bottom-spacing
 {
-  position: fixed;
-  top: 0; left:0;
-  width: 100%; 
+	/* push element 1% of the view window's height */
+	margin-bottom: 1vh;
 }
 
-/* when the users screen is on big */
+/* when the users screen is large */
 @media only screen and (max-width: 1520px) 
 {
+	/* award header text located in .award-top-right */
 	.award-header
 	{
+		/* increase font size to fill space */
 		font-size: 450%;
 	}
 }
@@ -629,120 +693,179 @@ footer:hover
 /* when the user is on a "mobile-like" resolution/aspect ratio */
 @media only screen and (max-width: 900px) 
 {
-    .award-header
+    /* award header text located in .award-top-right */
+	.award-header
 	{
+		/* increase font size to make the headers easier to read */
 		font-size: 350%;
 	}
-    #header
+    
+	/* main page header on index.html */
+	#header
 	{
+		/* make the header size depend on the inside logo */
 		height: auto;
+		
+		/* put spacing around the header logo */
 		padding: 10px;
 	}
+	
+	/* animated fixed header when the user scrolls down */
 	#header-fixed
 	{
+		/* hide animated fixed header on small screens to save space */
 		display: none;
 	}
+	
+	/* centering elements horizontally and vertically */
 	.center-xy
 	{
+		/* adjusting the logo positioning */
 		transform: translate(-51.5%, 0%);
 	}
+	
+	/* top left of the award section */
 	.award-top-left
 	{
+		/* fill the div 100% of it's parent div */
 		width: 100%;
+		
+		/* make the height 50% of it's parent div's height */
 		height: 50%;
 	}
+	
+	/* top right of the award section */
 	.award-top-right
 	{
+		/* fill the div 100% of it's parent div */
 		width: 100%;
+		
+		/* make the height 50% of it's parent div's height */
 		height: 50%;
 	}
+	
+	/* image describing the award */
 	.award-image
 	{
+		/* making the image size based on parent div height, also making it smaller */
 		height: 90%;
+		
+		/* making the image width auto, based on height */
 		width: auto;
+		
+		/* allowing the image to be moved */
 		position: relative;
+		
+		/* moving the image half of the div's height down */
 		top: 50%;
+		
+		/* moving the image half of the div's widht to the right */
 		left: 50%;
+		
+		/* transforming the images position back slightly, centering the image horizontally and vertically in its div */
 		transform: translate(-50%, -50%);
 	}
+	
+	/* header logo image */
 	#logo
 	{
+		/* set logo width to 90% of the parent div's width, instead of height */
 		width: 90%;
+		
+		/* set the logo height to be dependent on the width of the image */
 		height: auto;
 	}
 
+	/* info section */
 	.info-section-long
 	{
-		height: auto;
-		width: 100%;
-		background-color: rgb(255,255,255);
-		margin: .2vw;
+		/* increase spacing between info sections */
 		margin-bottom: 2.5vh;
 	}
 
-	/* hiding the scrollbar on "mobile-like" resolutions/aspect ratios */
+	/* scrollbar */
 	::-webkit-scrollbar 
 	{
-	    width: 0;
+	    /* setting scrollbar width to 0, hiding it on smaller screen sizes */
+		width: 0;
 	}
 
+	/* info sections on the left side of the page on desktop screens */
 	.left-side
 	{
+		/* getting rid of left float */
 		float: none;
+		
+		/* setting the width of the left side to 100% from 50% */
 		width: 100%;
-		display: inline-block;
 	}
-
+	
+	/* info sections on the right side of the page on desktop screens */
 	.right-side
 	{
+		/* getting rid of right float */
 		float: none;
+		
+		/* setting the width of the right side to 100% from 50% */
 		width: 100%;
-		display: inline-block;
 	}
 }
 
 /* if the users screen is super skinny/small */
 @media only screen and (max-width: 700px) 
-{
-	.award-image
-	{
-		width: 35%;
-		display: block;
-		margin: 0 auto;
-	}
-	
+{	
+	/* top left portion of the award sections */
 	.award-top-left
 	{
+		/* removing/hiding the top left portion (image) */
 		display: none;
 	}
+	
+	/* top right portion of the award sections */
 	.award-top-right
 	{
+		/* setting the width of the top right portion to 100%, filling the entire top half portion */
 		width: 100%;
+		
+		/* filling the entire height of the top half portion (50% of the entire section height) */
 		height: 100%;
+		
+		/* removing right float */
 		float: none;
 	}
 
+	/* top half portion of the award sections */
 	.award-top
 	{
+		/* making the top of the award section's height smaller */
 		height: 65%;
 	}
+	
+	/* bottom half portion of the award sections */
 	.award-bottom
 	{
-		padding: 1px;
+		/* making the bottom of the award section's height larger */
 		height: 35%;
 	}
+	
+	/* space that is safe for content to go */
 	#content-space
 	{
+		/* increasing the width of the content space */
 		width: 88vw;
 	}
 }
 
-/* when the users screen is very big */
+/* when the users screen is very large */
 @media only screen and (min-width: 2460px) 
 {
-    .award-image
-    {
-    	height: 95%;
-    	width: auto;
-    }
+	/* image describing award */
+	.award-image
+	{
+		/* switching the image height to be based on the div height, instead of width  */
+		height: 95%;
+		
+		/* making the width of the image be based on the height of the image */
+		width: auto;
+	}
 }
