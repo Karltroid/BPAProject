@@ -230,7 +230,7 @@ footer:hover
 	width: 100vw;
 
 	/* making the header/div fill 65% view height of the browser window */
-	height: 65vh;
+	height: 42vh;
 
 	/* making the background color of the header white */
 	background-color: rgb(255,255,255);
@@ -293,7 +293,7 @@ footer:hover
 	height: 85%;
 }
 
-/* backbutton that takes the user to the previous page */
+/* back/return button that takes the user to the previous page */
 #backbutton
 {
 	/* play animations during the course of half a second */
@@ -313,6 +313,12 @@ footer:hover
 
 	/* curve the edegs of the div, making it a circle */
 	border-radius: 50%;
+
+	/* shadow around the circle/div */
+	box-shadow: 0 0 10px 6px rgba(0,0,0,.85);
+
+	/* adding a very slight blur to add a sort of anti-aliasing to the edge of the circle */
+	filter: blur(.4px);
 }
 
 /* when the user is hovering over the back button */
@@ -323,6 +329,9 @@ footer:hover
 
 	/* darken the div background color */
 	background-color: rgba(0,0,0,.85);
+
+	/* shrinking shadow around the circle/div */
+	box-shadow: 0 0 10px 2px rgba(0,0,0,1);
 }
 
 /* class to center a element horizontall and vertically in another element */
@@ -605,6 +614,20 @@ footer:hover
 	margin-bottom: 1vh;
 }
 
+/* the image/logo that represents the header text */
+.info-section-image
+{
+	display: inline;
+	position: relative;
+	top: 5px;
+}
+
+/* sizing of the section logo */
+.info-section-image-sizing
+{
+	width: 35px;
+}
+
 /* the header portion of an info section */
 .info-section-header
 {
@@ -639,11 +662,11 @@ footer:hover
 	/* bpa gray font color */
 	color: rgb(105,105,105);
 	
-	/* put an indent on the beginning of every paragraph */
-	text-indent: 1vw;
+	/* indent on the beginning of every paragraph */
+	text-indent: 0vw;
 	
 	/* put some spacing  */
-	padding: 1.5vw .5vw 1vw .5vw;
+	padding: 1vw .5vw 1vw 1vw;
 }
 
 /* info-sections that are on the left side of the page when in desktop mode */
@@ -742,6 +765,13 @@ footer:hover
 		
 		/* make the height 50% of it's parent div's height */
 		height: 50%;
+	}
+
+	/* sizing of the section logo */
+	.info-section-image-sizing
+	{
+		/* increasing the padding on the left side of the image on mobile/small screens */
+		padding-left: 1vw;	
 	}
 	
 	/* image describing the award */
